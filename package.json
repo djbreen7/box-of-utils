@@ -1,0 +1,42 @@
+{
+  "name": "",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "vendor"
+  ],
+  "scripts": {
+    "lint": "eslint \"src/**\" \"tests/**\"",
+    "clean": "node_modules/.bin/rimraf ./dist",
+    "docs": "typedoc src/ && git add docs && git commit -m \"Update Docs\" && git push origin master",
+    "test": "jest && npm run lint",
+    "build": "npm run clean && tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "@types/node": "^11.13.11",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "eslint": "^5.16.0",
+    "jest": "^24.8.0",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^24.0.2",
+    "typedoc": "^0.15.0",
+    "typedoc-plugin-markdown": "^1.2.1",
+    "typescript": "^3.4.5"
+  }
+}
