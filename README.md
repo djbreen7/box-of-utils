@@ -1,7 +1,15 @@
-# TS NODE TEMPLATE
+# BOX OF UTILS
 
 ## Getting Started
-* `npm install`
+* `npm install --save box-of-utils`
+
+## Example
+
+```typescript
+import { doForDuration } from 'box-of-utils';
+
+doForDuration((): void => console.log('hello world'), 1000);
+```
 
 ## Dependencies
 * **Testing:** [Jest](https://jestjs.io/)
